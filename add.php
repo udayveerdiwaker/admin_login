@@ -1,8 +1,8 @@
 <?php
-require_once '../../includes/auth.php';
+require_once 'auth.php';
 checkAuth();
 
-require_once '../../includes/functions.php';
+require_once 'functions.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $data = [
@@ -27,12 +27,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 $page_title = "Add Member";
-include_once '../../includes/header.php';
-include_once '../../includes/sidebar.php';
+include_once 'header.php';
+include_once 'includes/sidebar.php';
 ?>
 
 <div class="main-content">
-    <?php include_once '../../includes/navbar.php'; ?>
+    <?php include_once 'includes/navbar.php'; ?>
 
     <div class="content">
         <div class="page-header">

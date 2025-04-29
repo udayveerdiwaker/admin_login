@@ -150,8 +150,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
 
         <div class="login-footer">
-            <p>Don't have an account? <a href="#">Contact administrator</a></p>
+            <p>Don't have an account? <a href="ragister.php">Ragister Now</a></p>
         </div>
+        
     </div>
 </body>
 

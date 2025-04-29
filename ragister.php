@@ -1,12 +1,12 @@
 <?php
-require_once 'includes/config.php';
-require_once 'includes/db.php';
-require_once 'includes/functions.php';
+require_once 'config.php';
+// require_once 'includes/db.php';
+require_once 'functions.php';
 
 $errors = [];
 $success = false;
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (isset($_POST['Register'])) {
     // Sanitize inputs
     $username = sanitizeInput($_POST['username']);
     $email = sanitizeInput($_POST['email']);
@@ -78,7 +78,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register | <php?= APP_NAME ?></title>
+    <title>Register | <php?= APP_NAME ?>
+    </title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -102,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </div>
                         <?php endif; ?>
 
-                        <form method="POST" novalidate>
+                        <form method="POST" action="login.php" novalidate>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="username" class="form-label">Username</label>
@@ -179,7 +180,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </div>
 
                             <div class="d-grid">
-                                <button type="submit" class="btn btn-primary">Register</button>
+                                <button type="submit" class="btn btn-primary" name="Register">Register</button>
                             </div>
                         </form>
 

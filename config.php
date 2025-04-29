@@ -27,10 +27,10 @@ if ($conn) {
 // }
 
 // Set timezone
-date_default_timezone_set('UTC');
+// date_default_timezone_set('UTC');
 
-// Start session
-session_start();
+// // Start session
+// session_start();
 
-// Base URL
-define('BASE_URL', 'http://localhost/gym-management/');
+// // Base URL
+// define('BASE_URL', 'http://localhost/gym-management/');

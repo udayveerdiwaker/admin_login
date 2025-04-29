@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include 'auth.php';
 
 // Get total members count
 function getTotalMembers()
